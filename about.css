@@ -1,0 +1,376 @@
+ 
+        /* --- 1. RESET & BASE --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body, html { 
+            background: #1a1a1a; 
+            font-family: 'Inter', sans-serif; 
+            overflow-x: hidden; 
+        }
+
+        /* --- 2. HERO SECTION --- */
+        #abt-hero {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url("./images/black lady with white nails.avif") center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 5;
+        }
+
+        /* --- 3. NAVIGATION --- */
+        .abt-nav {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            padding: 30px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .abt-logo img { height: 45px; filter: brightness(0) invert(1); }
+
+        /* Desktop Nav: Hidden on mobile */
+        .abt-links-desktop { display: flex; align-items: center; }
+        .abt-links-desktop a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .abt-contact-btn {
+            border: 1px solid white;
+            padding: 10px 20px;
+            transition: 0.3s;
+        }
+
+        /* Hamburger Icon: Shown on mobile */
+        .abt-hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+        }
+        .abt-hamburger span { width: 30px; height: 2px; background: white; }
+
+        /* --- 4. MOBILE OVERLAY (The Menu) --- */
+        .abt-mobile-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #1a1a1a;
+            z-index: 9999;
+            display: none; /* Hidden by default */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .abt-mobile-menu.is-active { display: flex !important; }
+        .abt-mobile-menu a {
+            color: white;
+            font-size: 2.5rem;
+            text-decoration: none;
+            margin: 15px 0;
+            font-family: 'Playfair Display', serif;
+        }
+        .abt-close-btn {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 3.5rem;
+            cursor: pointer;
+        }
+
+        /* --- 5. MASSIVE TEXT --- */
+        .abt-hero-title {
+            color: white;
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3rem, 10vw, 7rem);
+            text-align: center;
+            line-height: 1;
+        }
+
+        /* --- 6. STACKY PANELS --- */
+        .abt-panel {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 10%;
+        }
+        /* --- SPLIT CONTAINER FOR IMAGE & TEXT --- */
+.abt-split-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px; /* Space between image and text */
+    max-width: 1200px !important;
+    text-align: left !important;
+}
+
+.abt-image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.abt-founder-photo {
+    width: 100%;
+    max-width: 500px;
+    height: 650px; /* Massive height for impact */
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 20px 20px 0px rgba(216, 77, 100, 0.1); /* Subtle pink shadow offset */
+}
+
+.abt-text-wrapper {
+    flex: 1;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 1024px) {
+    .abt-split-container {
+        flex-direction: column; /* Stacks image on top of text */
+        gap: 40px;
+        text-align: center !important;
+        padding-top: 50px;
+    }
+
+    .abt-image-wrapper {
+        justify-content: center;
+    }
+
+    .abt-founder-photo {
+        height: 400px; /* Shorter on mobile */
+        max-width: 300px;
+    }
+
+    .abt-panel p {
+        margin: 0 auto;
+    }
+}
+        .abt-inner { max-width: 900px; }
+        .abt-tag { 
+          color: #d84d64; 
+          text-transform: uppercase; 
+          letter-spacing: 5px; 
+          font-weight: 700; 
+          margin-bottom: 20px; 
+          display: block; 
+        }
+        .abt-panel h2 { 
+          font-family: 'Playfair Display', serif; 
+          font-size: clamp(2.5rem, 7vw, 5rem); 
+          margin-bottom: 20px; }
+        .abt-panel p { 
+          font-size: 1.2rem; 
+          line-height: 1.8; 
+          max-width: 700px; 
+          margin: 0 auto; 
+        }
+
+        /* Panel Colors & Z-Index (For stacking) */
+        .panel-white { 
+          background: #ffffff; 
+          color: #1a1a1a; 
+          z-index: 10; 
+        }
+        .panel-nude  { 
+          background: #f8f1ee; 
+          color: #1a1a1a; 
+          z-index: 20;
+         }
+        .panel-dark  { 
+          background: #1a1a1a; 
+          color: #ffffff; 
+          z-index: 30; 
+        }
+
+        /* Responsive Fixes */
+        @media (max-width: 1024px) {
+            .abt-links-desktop { display: none; }
+            .abt-hamburger { display: flex; }
+        }
+.footer-section {
+  background-color: #d84d64;
+  color: #ffffff;      /* Changed text to white so it's visible */
+  padding: 80px 5%;
+  position: relative;
+  z-index: 100;        /* Higher than your last panel (30) */
+  display: flex;
+  justify-content: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+  gap: 40px;
+}
+
+.footer-left, .footer-right {
+  flex: 1 1 300px;
+}
+
+.footer-logo {
+  width: 150px;
+  filter: brightness(0) invert(1); /* Makes the logo white */
+}
+
+.footer-right h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #d84d64; /* Brand Pink */
+}
+
+.footer-right a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+.footer-right .social-icons {
+  margin: 20px 0;
+  display: flex;
+  gap: 15px;
+}
+
+.footer-right .social-icons img {
+  width: 24px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease;
+}
+
+.footer-right .social-icons img:hover {
+  transform: translateY(-5px);
+}
+
+.lastdiv p {
+  font-size: 0.8rem;
+  opacity: 0.6;
+  margin-top: 30px;
+}
+.firstbut{
+   padding: 20px 32px;
+    background-color: #d84d64;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    font-family: tahoma;
+}
+
+.abt-hero-title {
+  font-family: tahoma;
+  
+}
+.abtlog {
+  width: 100px;
+  height: 200px;
+  object-fit: cover;
+}
+
+
+
+/* --- MAP PANEL & RESPONSIVENESS --- */
+.panel-map {
+    background: #ffffff;
+    z-index: 40; /* High enough to slide over previous sections */
+}
+
+.abt-map-layout {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    max-width: 1200px !important;
+    text-align: left !important;
+    width: 100%;
+}
+
+.abt-map-text {
+    flex: 1;
+}
+
+.abt-studio-name {
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.abt-address-box p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+.abt-directions-link {
+    display: inline-block;
+    margin-top: 25px;
+    color: #d84d64; /* Your brand pink */
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.abt-directions-link:hover {
+    border-bottom: 2px solid #d84d64;
+}
+
+.abt-map-frame {
+    flex: 1.2;
+    height: 500px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 40px 100px rgba(0,0,0,0.1);
+    filter: grayscale(100%) contrast(1.1); /* Elegant black & white map */
+}
+
+/* ===================== MOBILE RESPONSIVENESS ===================== */
+@media (max-width: 1024px) {
+    .abt-map-layout {
+        flex-direction: column; /* Stack vertically */
+        gap: 40px;
+        text-align: center !important;
+        padding: 80px 20px;
+    }
+
+    .abt-map-frame {
+        width: 100%;
+        height: 350px; /* Smaller height for phones */
+        order: 1; /* Puts the map on top if you prefer */
+    }
+
+    .abt-map-text {
+        order: 2;
+    }
+
+    .abt-display-text {
+        font-size: 3rem; /* Scaled down massive text */
+    }
+}
+
+
+
+
+  

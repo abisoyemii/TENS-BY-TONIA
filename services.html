@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - TENS</title>
+  <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.0/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+  <!-- HEADER + HERO (same as home) -->
+  <header id="firstheader">
+    <div class="sparkle-layer"></div>
+
+    <nav class="nav-links">
+      <div class="nav-row">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="NewClients.html">New Clients</a>
+      </div>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <div class="logo-container">
+      <img class="logo" src="./images/Copilot_20260121_121459-removebg-preview.png" alt="Logo">
+    </div>
+
+    <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div class="hero-text-container">
+      
+      <a href="#" class="hero-btn">BOOK NOW</a>
+    </div>
+  </header>
+
+  <div class="menu-overlay" id="menuOverlay">
+    <button class="close-btn" id="closeBtn">&times;</button>
+
+    <div class="logo-containermenu">
+        <img class="logomenu" src="./images/Copilot_20260121_121459-removebg-preview.png" alt="Logo">
+      </div>
+    <nav class="menu-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="NewClients.html">New Clients</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="booking.html">Book Appointment</a>
+
+    </nav>
+
+    <a href="#" class="hero-btn">BOOK NOW</a>
+  </div>
+
+ <section class="tikscroll-panel" style="background-color: #fefefe;">
+  <div class="container">
+    <h2 class="section-title">Our Signature Services</h2>
+    <p class="section-subtitle">
+      Indulge in luxury nail care crafted to perfection.
+    </p>
+
+    <div class="service-cards">
+      <div class="service-card">
+        <h3>Classic & Luxury Manicure</h3>
+        <p>
+          Impeccable nail shaping, cuticle care, and flawless polish
+          for a clean, elegant finish.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Pedicure Treatments</h3>
+        <p>
+          Relaxing pedicure services designed to refresh, soften,
+          and beautify your feet.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Gel & Acrylic Nails</h3>
+        <p>
+          Long-lasting gel and acrylic enhancements tailored to your
+          desired shape and length.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Nail Art & Custom Designs</h3>
+        <p>
+          From minimal elegance to bold creativity, our nail art
+          speaks your style.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="tikscroll-panel" style="background-color: #f8f3f6;">
+  <div class="container">
+    <h2 class="section-title">Why Choose TENS</h2>
+
+    <div class="service-cards">
+      <div class="service-card">
+        <h3>Premium Products</h3>
+        <p>
+          We use only high-quality, safe, and long-lasting nail products
+          for flawless results.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Expert Nail Technicians</h3>
+        <p>
+          Skilled professionals dedicated to precision, hygiene,
+          and beauty excellence.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Luxury Experience</h3>
+        <p>
+          Every appointment is designed to feel relaxing, exclusive,
+          and indulgent.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section class="tikscroll-panel" style="background-color: #f0f4f8;">
+  <div class="container">
+    <h2 class="section-title">Client Love</h2>
+
+    <div class="testimonials">
+      <blockquote>
+        “Absolutely the best nail experience I’ve ever had.
+        Clean, classy, and beautifully done.”
+      </blockquote>
+
+      <blockquote>
+        “TENS by Tonia is luxury redefined. My nails always look perfect!”
+      </blockquote>
+
+      <blockquote>
+        “The attention to detail is unmatched. I feel pampered every time.”
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="tikscroll-panel" style="background-color: #fff0f5;">
+  <div class="container">
+    <h2 class="section-title">Ready to Get Polished?</h2>
+    <p class="section-subtitle">
+      Book your appointment today and experience nail luxury like never before.
+    </p>
+
+    <a href="#contactForm" class="hero-btn">BOOK AN APPOINTMENT</a>
+  </div>
+</section>
+
+
+
+<section class="tikscroll-panel" style="background-color: #ffffff;">
+  <div class="container">
+    <h2 class="section-title">Contact Us</h2>
+
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+
+<footer id="contact" class="footer-section">
+  <div class="footer-container">
+    <div class="footer-left">
+      <img src="./images/Copilot_20260121_121459-removebg-preview.png" alt="Logo" class="footer-logo">
+    </div>
+
+    <div class="footer-right">
+      <h4>Contact Us</h4>
+      
+      <p>Phone: +234 907 9066 183</p>
+      <div class="social-icons">
+        <a href="#"><img src="./images/instagramicon.png" alt="Instagram"></a>
+        <a href="#"><img src="./images/facebookicon.png" alt="Facebook"></a>
+        <a href="#"><img src="./images/tiktokicon.png" alt="Tiktok"></a>
+      </div>
+            <div class="lastdiv">
+              <p>© 2026 TENS BY TONIA. All rights reserved.</p>
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=arewamariam2020@gmail.com">arewamariam2020@gmail.com</a>
+
+            </div>
+
+    </div>
+  </div>
+</footer>
+
+
+
+
+  <script src="services.js"></script>
+</body>
+</html>

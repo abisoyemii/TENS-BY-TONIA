@@ -1,0 +1,545 @@
+body {
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+#firstheader {
+  width: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background: url("images/close-up-nail-care-treatment.jpg") center/cover no-repeat;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-top: -100px;
+  /* margin-bottom: 350px; */
+}
+
+.logo {
+  width: 250px;
+  height: auto;
+  object-fit: contain;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 40px;
+  padding-top: 100px;
+}
+
+.nav-row {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f32e2e;
+}
+
+.hamburger {
+  display: none;
+}
+
+.menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.95);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.menu-overlay .menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.menu-overlay .menu-links a {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.menu-overlay .menu-links a:hover {
+  color: #f32e2e;
+}
+
+.menu-overlay .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 3rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.logo-containermenu {
+  z-index: 9999;
+  display: flex;
+   margin-top: -160px;
+    justify-content: center;
+}
+.logomenu {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+}
+.hero-text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.hero-text-container h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero-text-container p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.hero-btn {
+  padding: 15px 30px;
+  background: #f32e2e;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #c12727;
+}
+
+
+section.tikscroll-panel {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px 20px;
+  overflow: hidden;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.service-card {
+  background: #f8f8f8;
+  padding: 30px;
+  margin: 15px;
+  flex: 1 1 250px;
+  border-radius: 12px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+}
+
+.testimonials blockquote {
+  font-style: italic;
+  margin: 20px auto;
+  max-width: 600px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+}
+
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#contactForm input,
+#contactForm textarea {
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+#contactForm button {
+  padding: 15px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#contactForm button:hover {
+  background: #0056b3;
+}
+
+footer {
+  font-size: 0.9rem;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; flex-direction: column; justify-content: space-between; width: 30px; height: 25px; cursor: pointer; position: absolute; top: 20px; right: 20px; z-index: 1100; }
+  .hamburger div { height: 3px; background-color: white; border-radius: 2px; }
+  .logo { width: 150px; }
+  #firstheader { 
+    height: 83vh; 
+    width: 100%;
+    padding-top: 100px;
+  background: url("images/close-up-nail-care-treatment.jpg") center/cover no-repeat;
+ }
+  .hero-text-container h1 { 
+    font-size: 2rem;
+ }
+  .hero-text-container p { 
+    font-size: 1rem;
+ }
+  .service-cards { 
+    flex-direction: column;
+ }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  overflow-x: hidden;
+  background: #fff;
+  color: #222;
+}
+
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+
+.tikscroll-panel {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.section-title {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 50px;
+  opacity: 0.8;
+}
+
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.service-card {
+  background: #fff;
+  padding: 35px 25px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease;
+}
+
+.service-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+
+.tikscroll-panel:nth-child(even) .service-card {
+  background: #fff6f9;
+}
+
+
+.testimonials {
+  max-width: 800px;
+  margin: auto;
+}
+
+.testimonials blockquote {
+  font-style: italic;
+  font-size: 1.1rem;
+  margin: 30px auto;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease;
+}
+
+
+.hero-btn {
+  display: inline-block;
+  padding: 15px 40px;
+  background: #f32e2e;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 50px;
+  margin-top: 20px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #c12727;
+  transform: translateY(-3px);
+}
+
+
+#contactForm {
+  max-width: 500px;
+  margin: auto;
+}
+
+#contactForm input,
+#contactForm textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+#contactForm textarea {
+  resize: none;
+  height: 140px;
+}
+
+#contactForm button {
+  width: 100%;
+  padding: 15px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#contactForm button:hover {
+  background: #333;
+}
+
+
+footer {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+
+@media (max-width: 768px) {
+
+  .tikscroll-panel {
+    height: auto;
+    padding: 100px 20px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .service-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials blockquote {
+    font-size: 1rem;
+  }
+}
+
+.tikscroll-panel {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 240, 245, 0.7),
+    rgba(255, 255, 255, 0.9)
+  );
+}
+.service-card {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 20px 50px rgba(243, 46, 46, 0.12);
+}
+.service-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 35px 80px rgba(243, 46, 46, 0.25);
+}
+.hero-btn {
+  background: linear-gradient(135deg, #f32e2e, #ff6f91);
+  box-shadow: 0 15px 40px rgba(243, 46, 46, 0.35);
+}
+
+.hero-btn:hover {
+  background: linear-gradient(135deg, #ff6f91, #f32e2e);
+  box-shadow: 0 25px 70px rgba(243, 46, 46, 0.5);
+}
+@media (max-width: 768px) {
+  .service-card {
+    backdrop-filter: none;
+    background: #fff;
+  }
+}
+
+.sparkle-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2; 
+  overflow: hidden;
+}
+
+.sparkle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: radial-gradient(circle, #fff, rgba(255,255,255,0));
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: floatSparkle linear infinite;
+}
+
+@keyframes floatSparkle {
+  0% {
+    transform: translateY(100vh) scale(0.6);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .sparkle {
+    width: 4px;
+    height: 4px;
+  }
+}
+
+
+
+
+
+
+
+
+#map {
+  height: 500px; 
+  width: 100%;   
+  border: 2px solid #333; 
+  border-radius: 10px;    
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.footer-section {
+  background: #000000;
+  color: #fff;
+  padding: 60px 20px;
+  justify-content: center;
+  display: flex;
+ 
+}
+
+
+.footer-left, .footer-right {
+  margin: 10px 0;
+  flex: 1 1 300px;
+}
+.footer-logo {
+  width: 120px;
+  margin-left: 20px;
+  margin-bottom: 15px;
+ 
+}
+.footer-right h4 {
+  margin-bottom: 15px;
+}
+.footer-right p {
+  margin-bottom: 10px;
+}
+.footer-right .social-icons img {
+  width: 24px;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+.footer-right .social-icons img:hover {
+  transform: scale(1.2);
+}

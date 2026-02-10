@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tens by Tonia - Book Appointment</title>
+  <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+
+<!-- HERO HEADER -->
+<header class="booking-header">
+
+  <!-- NAVIGATION -->
+  <nav class="booking-nav">
+    <div class="booking-nav-row">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="NewClients.html">New Clients</a>
+    </div>
+  </nav>
+
+  <!-- LOGO -->
+  <div class="booking-logo">
+    <img src="./images/Copilot_20260121_121459-removebg-preview.png" alt="Logo">
+  </div>
+
+  <!-- HAMBURGER -->
+  <div class="booking-hamburger" id="booking-hamburger">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- HERO BUTTON -->
+  <div class="booking-hero-btn-container">
+  </div>
+
+</header>
+
+<!-- HAMBURGER MENU OVERLAY -->
+<div class="booking-menu-overlay" id="booking-menu-overlay">
+  <button class="booking-menu-close-btn" id="booking-close-btn">&times;</button>
+
+  <div class="booking-logo-menu">
+    <img src="./images/Copilot_20260121_121459-removebg-preview.png" alt="Logo">
+  </div>
+
+  <nav class="booking-menu-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="NewClients.html">New Clients</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="booking.html">Book Appointment</a>
+  </nav>
+
+</div>
+
+<!-- BOOKING FORM SECTION -->
+<section id="booking-form" class="booking-section">
+  <div class="booking-container">
+    <h2>Book Your Luxury Nail Experience</h2>
+    <form class="booking-form">
+      <div class="booking-form-group">
+        <input type="text" placeholder=" " required>
+        <label>Your Name</label>
+      </div>
+      <div class="booking-form-group">
+        <input type="email" placeholder=" " required>
+        <label>Email</label>
+      </div>
+      <div class="booking-form-group">
+        <input type="tel" placeholder=" " required>
+        <label>Phone Number</label>
+      </div>
+      <div class="booking-form-group">
+        <select required>
+          <option value="" disabled selected>Select Service</option>
+          <option>Manicure</option>
+          <option>Pedicure</option>
+          <option>Gel Nails</option>
+          <option>Extensions</option>
+        </select>
+        <label>Select Service</label>
+      </div>
+      <div class="booking-form-group">
+        <input type="date" required>
+        <label>Date</label>
+      </div>
+      <div class="booking-form-group">
+        <input type="time" required>
+        <label>Time</label>
+      </div>
+      <div class="booking-form-group">
+        <textarea placeholder=" "></textarea>
+        <label>Special Requests</label>
+      </div>
+      <button type="submit" class="booking-btn">Continue to Payment</button>
+    </form>
+  </div>
+</section>
+
+<!-- BOOKING POLICIES -->
+<section class="booking-policies-section">
+  <div class="booking-policies-container">
+    <h2>Booking Policies</h2>
+    <ul>
+      <li>Please arrive 5–10 minutes before your appointment.</li>
+      <li>Cancellations within 24 hours may incur a 50% fee.</li>
+      <li>All services require prepayment via our payment form to secure your spot.</li>
+      <li>Children under 12 must be accompanied by an adult.</li>
+      <li>We reserve the right to refuse service if nails are damaged or illness is present.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- PAYMENT FORM -->
+<section class="booking-payment-section">
+  <div class="booking-payment-container">
+    <form class="booking-payment-form">
+      <h2>Secure Your Appointment with Payment</h2>
+      <div class="booking-payment-methods">
+        <img src="./images/visa.png" alt="Visa">
+        <img src="./images/mc.png" alt="Mastercard">
+        <img src="./images/paypal.png" alt="PayPal">
+      </div>
+
+      <div class="booking-form-group">
+        <input type="text" placeholder=" " required>
+        <label>Cardholder Name</label>
+      </div>
+      <div class="booking-form-group">
+        <input type="text" placeholder=" " maxlength="19" required>
+        <label>Card Number</label>
+      </div>
+      <div class="booking-form-group two-col">
+        <div>
+          <input type="text" placeholder=" " maxlength="5" required>
+          <label>Expiry</label>
+        </div>
+        <div>
+          <input type="text" placeholder=" " maxlength="3" required>
+          <label>CVV</label>
+        </div>
+      </div>
+
+      <button type="submit" class="booking-btn" id="booking-payment-btn">Pay Now</button>
+    </form>
+
+    <!-- PAYMENT MODAL -->
+    <div class="booking-payment-modal" id="bookingPaymentModal">
+      <div class="booking-payment-modal-content">
+        <span class="booking-close-modal" id="closePaymentModal">&times;</span>
+        <h3>Payment Successful!</h3>
+        <p>💅 Your appointment has been booked and secured.</p>
+        <button class="booking-btn" id="modalBtn">Okay</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="booking-map-section">
+  <h2>Our Location</h2>
+  <div class="booking-map-container">
+    <iframe
+      src="https://www.google.com/maps?q=22%20Iduntafa%20Str,%20off%20Adeniji%20Adele%20Road,%20Lagos%20Island,%20Lagos,%20Nigeria&output=embed"
+      allowfullscreen="" loading="lazy"></iframe>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="booking-footer">
+  <div class="booking-footer-container">
+    <div class="booking-footer-left">
+      <img src="./images/Copilot_20260121_121459-removebg-preview.png" alt="Logo" class="booking-footer-logo">
+      <p>© 2026 TENS BY TONIA. All rights reserved.</p>
+    </div>
+    <div class="booking-footer-right">
+      <h4>Contact Us</h4>
+      <p>Email: info@tensbytonia.com</p>
+      <p>Phone: +234 123 456 7890</p>
+      <div class="booking-social-icons">
+        <a href="#"><img src="./images/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="./images/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="./images/twitter.png" alt="Twitter"></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="booking.js"></script>
+</body>
+</html>
