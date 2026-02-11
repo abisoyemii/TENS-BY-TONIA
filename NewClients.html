@@ -2,10 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
     <title>New Clients | Tens by Tonia</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="newclients.css">
+    <link rel="stylesheet" href="styles.css?v=2">
+<link rel="stylesheet" href="newclients.css?v=2">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
@@ -17,7 +20,7 @@
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="services.html">Services</a>
-                <a href="NewClients.html" class="active">New Clients</a>
+                <a href="newclients.html" class="active">New Clients</a>
             </div>
             <a href="booking.html">Contact Us</a>
         </nav>
@@ -42,7 +45,7 @@
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="services.html">Services</a>
-            <a href="NewClients.html">New Clients</a>
+            <a href="newclients.html">New Clients</a>
             <a href="contact.html">Contact Us</a>
             <a href="booking.html">Book Appointment</a>
         </nav>
@@ -130,6 +133,28 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+<script src="newclients.js?v=2"></script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const menuOverlay = document.getElementById('menuOverlay');
+    const closeBtn = document.getElementById('closeBtn');
+
+    if (hamburger) {
+        hamburger.onclick = function() {
+            console.log("Hamburger clicked!"); // Check console for this!
+            menuOverlay.classList.add('active');
+        };
+    }
+
+    if (closeBtn) {
+        closeBtn.onclick = function() {
+            menuOverlay.classList.remove('active');
+        };
+    }
+});
+</script>
 </body>
 </html>
