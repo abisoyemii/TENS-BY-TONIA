@@ -1,160 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
-    <title>New Clients | Tens by Tonia</title>
-    <link rel="stylesheet" href="styles.css?v=2">
-<link rel="stylesheet" href="newclients.css?v=2">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Clients | Tens by Tonia</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="newclients.css" />
 </head>
 <body>
 
-    <header id="firstheader">
-        <nav class="nav-links">
-            <div class="nav-row">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="services.html">Services</a>
-                <a href="newclients.html" class="active">New Clients</a>
-            </div>
-            <a href="booking.html">Contact Us</a>
-        </nav>
+<!-- STICKY NAVBAR -->
+ <header id="firstheader">
 
-        <div class="logo-container">
-            <img class="logo" src="./images/Copilot_20260121_121459-removebg-preview.png" alt="Logo">
-        </div>
-
-        <div class="hamburger" id="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </header>
-
-    <div class="menu-overlay" id="menuOverlay">
-        <div class="logo-containermenu">
-            <img class="logomenu" src="./images/Copilot_20260121_121459-removebg-preview.png" alt="Logo">
-        </div>
-        <button class="close-btn" id="closeBtn">&times;</button>
-        <nav class="menu-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="newclients.html">New Clients</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="booking.html">Book Appointment</a>
-        </nav>
-        <a href="booking.html" class="hero-btn">BOOK NOW</a>
+      <nav class="nav-links">
+    <div class="nav-row">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="newclients.html">newClients</a>
     </div>
+    <a href="booking.html">Contact Us</a>
+</nav>
 
-    <main class="stacking-container">
+      <div class="logo-container">
+        <img class="logo" src="./images/Copilot_20260121_121459-removebg-preview.png" alt="Logo">
+      </div>
+
+      <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <div class="hero-text-container">
+        <h1 id="TENS">THE ART OF THE TENS</h1>
+        <p class="taoft">Professional Nail Care
+          <br />& Stunning Designs
+
+</p>
         
-        <section class="sticky-section" id="nc-hero">
-            <div class="content-wrapper">
-                <h1 class="reveal-text">Welcome to TENS</h1>
-                <p class="reveal-text">Where your nail journey begins. We are thrilled to have you.</p>
-                <div class="scroll-indicator">
-                    <span>Scroll to Explore</span>
-                    <div class="arrow-down"></div>
-                </div>
-            </div>
-        </section>
-
-        <section class="sticky-section" id="nc-expect">
-            <div class="content-wrapper split-layout">
-                <div class="text-side">
-                    <h2>First Time?</h2>
-                    <p>At Tens by Tonia, we prioritize the health of your natural nails. Your first appointment includes a complimentary consultation to assess your nail health and lifestyle needs.</p>
-                    <ul class="chic-list">
-                        <li>Personalized Style Consultation</li>
-                        <li>Nail Health Assessment</li>
-                        <li>Premium Gel-X or BIAB Application</li>
-                    </ul>
-                </div>
-                <div class="image-side">
-                    <img src="./images/nail-1.jpeg" alt="Nail Consultation"> 
-                </div>
-            </div>
-        </section>
-
-        <section class="sticky-section" id="nc-policies">
-            <div class="content-wrapper">
-                <h2>House Policies</h2>
-                <div class="policy-grid">
-                    <div class="policy-card">
-                        <h3>Deposits</h3>
-                        <p>A 50% non-refundable deposit is required to secure your slot. This goes towards your final bill.</p>
-                    </div>
-                    <div class="policy-card">
-                        <h3>Late Arrival</h3>
-                        <p>We have a 15-minute grace period. After this, we may need to reschedule to respect the next client's time.</p>
-                    </div>
-                    <div class="policy-card">
-                        <h3>Bare Nails</h3>
-                        <p>Please arrive with bare nails unless you have booked a removal service add-on.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="sticky-section" id="nc-cta">
-            <div class="content-wrapper center-content">
-                <h2>Ready to get Tensed?</h2>
-                <p>Join our exclusive client list and experience luxury.</p>
-                <a href="booking.html" class="hero-btn white-btn">Book Your Slot</a>
-            </div>
-        </section>
-
-    </main>
-
-    <footer id="contact" class="footer-section">
-        <div class="footer-container">
-            <div class="footer-left">
-                <img src="./images/Copilot_20260121_121459-removebg-preview.png" alt="Logo" class="footer-logo">
-            </div>
-            <div class="footer-right">
-                <h4>Contact Us</h4>
-                <p>Phone: +234 907 9066 183</p>
-                <div class="social-icons">
-                    <a href="#"><img src="./images/instagramicon.png" alt="Instagram"></a>
-                    <a href="#"><img src="./images/facebookicon.png" alt="Facebook"></a>
-                    <a href="#"><img src="./images/tiktokicon.png" alt="Tiktok"></a>
-                </div>
-                <div class="lastdiv">
-                    <p>© 2026 TENS BY TONIA. All rights reserved.</p>
-                    <a href="mailto:arewamariam2020@gmail.com">arewamariam2020@gmail.com</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-<script src="newclients.js?v=2"></script>
+      </div>
 
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const hamburger = document.getElementById('hamburger');
-    const menuOverlay = document.getElementById('menuOverlay');
-    const closeBtn = document.getElementById('closeBtn');
+  
 
-    if (hamburger) {
-        hamburger.onclick = function() {
-            console.log("Hamburger clicked!"); // Check console for this!
-            menuOverlay.classList.add('active');
-        };
-    }
+   </header>
+ <div class="menu-overlay" id="menuOverlay">
 
-    if (closeBtn) {
-        closeBtn.onclick = function() {
-            menuOverlay.classList.remove('active');
-        };
-    }
-});
-</script>
+  <div class="logo-containermenu">
+        <img class="logomenu" src="./images/Copilot_20260121_121459-removebg-preview.png" alt="Logo">
+      </div>
+
+      <button class="close-btn" id="closeBtn">&times;</button>
+      <nav class="menu-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="newclients.html">newclients</a>
+        <a href="booking.html">Book Appointment</a>
+ </nav>
+      </div>
+        
+     
+
+<!-- HERO -->
+<section id="hero" class="hero hero-newclients">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Welcome, New Clients ✨</h1>
+    <p>Experience luxury nails with a sleek, modern touch</p>
+    <a href="#booking" class="btn-primary">Book Now</a>
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="section about-section">
+  <div class="container section-container">
+    <h2>About Our New Clients Program</h2>
+    <p>
+      At Tens by Tonia, new clients receive a personalized consultation to ensure your nail experience
+      is tailored to your style, comfort, and preferences.
+    </p>
+    <img src="./images/spa-salon-therapy-treatment_53876-141241.avif" alt="New client nail service" class="section-img">
+  </div>
+</section>
+
+<!-- EXPECTATIONS / BENEFITS -->
+<section id="expect" class="section expect-section">
+  <div class="container section-container split-layout">
+    <div class="text-side">
+      <h2>What to Expect</h2>
+      <ul class="benefits-list">
+        <li>Professional and hygienic environment</li>
+        <li>Custom nail designs to match your style</li>
+        <li>Friendly staff and relaxing atmosphere</li>
+        <li>Luxury service from start to finish</li>
+      </ul>
+    </div>
+    <div class="image-side">
+      <img src="./images/new-client-2.jpeg" alt="Nail design sample">
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section services-section">
+  <div class="container section-container">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="./images/service-1.jpeg" alt="Classic Manicure">
+        <h3>Classic Manicure</h3>
+      </div>
+      <div class="service-card">
+        <img src="./images/service-2.jpeg" alt="Gel Nails">
+        <h3>Gel Nails</h3>
+      </div>
+      <div class="service-card">
+        <img src="./images/service-3.jpeg" alt="Pedicure">
+        <h3>Pedicure</h3>
+      </div>
+      <div class="service-card">
+        <img src="./images/service-4.jpeg" alt="Nail Art">
+        <h3>Nail Art</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="section gallery-section">
+  <div class="container section-container">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="./images/gallery-1.jpeg" alt="Gallery Image 1">
+      <img src="./images/gallery-2.jpeg" alt="Gallery Image 2">
+      <img src="./images/gallery-3.jpeg" alt="Gallery Image 3">
+      <img src="./images/gallery-4.jpeg" alt="Gallery Image 4">
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING FORM -->
+<section id="booking" class="section booking-section">
+  <div class="container section-container">
+    <h2>Book Your First Appointment</h2>
+    <form class="contact-form" id="newClientForm">
+      <div class="form-group">
+        <input type="text" placeholder="Full Name" required>
+      </div>
+      <div class="form-group">
+        <input type="email" placeholder="Email Address" required>
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="Phone Number" required>
+      </div>
+      <div class="form-group">
+        <textarea rows="6" placeholder="Your Message"></textarea>
+      </div>
+      <button type="submit" class="btn-primary">Send Message</button>
+      <p class="form-status" id="formStatus"></p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-container">
+    <img src="./images/Copilot_20260121_121459-removebg-preview.png" alt="Logo" class="footer-logo">
+    <p>© 2026 TENS BY TONIA. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script src="newclients.js"></script>
+<script src="script.js"></script>
+
+
 </body>
 </html>

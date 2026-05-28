@@ -1,236 +1,326 @@
-/* --- RESET & BASICS (If not already in styles.css) --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-/* Base state - hidden */
-.menu-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #000; /* or your brand color */
-    display: none;    /* Start hidden */
-    z-index: 9999;    /* Must be higher than header */
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
 
-/* Active state - triggered by JS */
-.menu-overlay.active {
-    display: flex;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Inter', sans-serif; /* Or your preferred font */
-    background-color: #f9f9f9;
-    color: #333;
-    overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+  background: #0e0e0e;
+  color: #fff;
+  overflow-x: hidden;
 }
 
-/* --- THE STACKING EFFECT --- */
-.stacking-container {
-    position: relative;
-    width: 100%;
+/* =====================
+   HEADER / HERO
+===================== */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #111;
+  padding: 20px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
 }
 
-.sticky-section {
-    position: sticky;
-    top: 0;
-    height: 100vh; /* Takes full screen height */
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 -10px 30px rgba(0,0,0,0.1); /* Shadow creates depth between cards */
-    overflow: hidden;
+.sticky-header .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #d4af37;
+  text-decoration: none;
 }
 
-/* Section 1: Hero - Light Beige */
-#nc-hero {
-    background-color: #f8f5f2; 
-    z-index: 1;
+#navMenu {
+  display: flex;
+  gap: 20px;
 }
 
-/* Section 2: Expect - Soft Pink/Nude */
-#nc-expect {
-    background-color: #ebdcdb; 
-    z-index: 2;
+#navMenu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
 }
 
-/* Section 3: Policies - Dark Elegant */
-#nc-policies {
-    background-color: #1a1a1a; 
-    color: #fff;
-    z-index: 3;
+#navMenu a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #d4af37;
+  left: 0;
+  bottom: -4px;
+  transition: 0.3s;
 }
 
-/* Section 4: CTA - Brand Accent */
-#nc-cta {
-    background-color: #d4a373; /* Gold/Bronze tone */
-    color: #fff;
-    z-index: 4;
+#navMenu a:hover::after {
+  width: 100%;
 }
 
-/* --- INNER CONTENT STYLING --- */
-.content-wrapper {
-    max-width: 1200px;
-    width: 90%;
-    margin: 0 auto;
-    padding: 2rem;
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
 }
 
-/* Typography */
-.sticky-section h1 {
-    font-size: 4rem;
-    font-weight: 300;
-    letter-spacing: -2px;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
+.hamburger div {
+  width: 28px;
+  height: 3px;
+  background: #fff;
+  margin: 5px 0;
+  transition: all 0.3s;
 }
 
-.sticky-section h2 {
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
-    font-weight: 300;
+.hamburger.open div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.open div:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open div:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
 }
 
-.sticky-section p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    max-width: 600px;
+/* =====================
+   HERO
+===================== */
+.hero-newclients {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./images/new-client-hero.jpeg') center/cover no-repeat;
+  position: relative;
+  padding: 0 6%;
 }
 
-/* Split Layout (Text + Image) */
+.hero-newclients h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  margin-bottom: 20px;
+  color: #d4af37;
+}
+
+.hero-newclients p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+.btn-primary {
+  padding: 14px 40px;
+  border-radius: 40px;
+  background: #d4af37;
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* =====================
+   SECTIONS
+===================== */
+.section {
+  padding: 120px 6%;
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #d4af37;
+}
+
+.section p {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  margin-bottom: 30px;
+}
+
+.section-img {
+  width: 100%;
+  border-radius: 25px;
+  margin-top: 20px;
+}
+
+/* SPLIT LAYOUT */
 .split-layout {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
 }
 
-.split-layout .text-side {
-    flex: 1;
+.text-side ul {
+  list-style: disc;
+  margin-left: 20px;
 }
 
-.split-layout .image-side {
-    flex: 1;
-    height: 500px;
+.text-side li {
+  margin-bottom: 10px;
 }
 
-.image-side img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+/* SERVICES GRID */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
 }
 
-/* Policy Grid */
-.policy-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+.service-card {
+  background: #161616;
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s, background 0.3s;
 }
 
-.policy-card {
-    border: 1px solid rgba(255,255,255,0.2);
-    padding: 2rem;
-    border-radius: 8px;
-    background: rgba(255,255,255,0.05);
-    transition: transform 0.3s ease;
+.service-card:hover {
+  transform: translateY(-8px);
+  background: #1a1a1a;
 }
 
-.policy-card:hover {
-    transform: translateY(-5px);
-    background: rgba(255,255,255,0.1);
+.service-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
 }
 
-.policy-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #d4a373;
+.service-card h3 {
+  margin: 15px 0;
+  color: #d4af37;
 }
 
-/* Chic List */
-.chic-list {
-    list-style: none;
-    margin-top: 2rem;
+/* GALLERY */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
 }
 
-.chic-list li {
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-    font-size: 1.1rem;
+.gallery-grid img {
+  width: 100%;
+  border-radius: 20px;
+  transition: transform 0.3s;
 }
 
-/* Scroll Indicator */
-.scroll-indicator {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    opacity: 0.7;
+.gallery-grid img:hover {
+  transform: scale(1.05);
 }
 
-.arrow-down {
-    width: 20px;
-    height: 20px;
-    border-right: 2px solid #333;
-    border-bottom: 2px solid #333;
-    transform: rotate(45deg);
-    margin: 10px auto 0;
-    animation: bounce 2s infinite;
+/* BOOKING FORM */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
 }
 
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {transform: rotate(45deg) translate(0, 0);}
-    40% {transform: rotate(45deg) translate(-10px, -10px);}
-    60% {transform: rotate(45deg) translate(-5px, -5px);}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  font-size: 1rem;
 }
 
-/* CTA Button Variation */
-.white-btn {
-    background: #fff;
-    color: #d4a373;
-    margin-top: 2rem;
-    display: inline-block;
-    padding: 15px 40px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 30px;
-    transition: all 0.3s;
+.contact-form button {
+  width: max-content;
+  padding: 14px 40px;
+  border-radius: 40px;
+  background: #d4af37;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
 }
 
-.white-btn:hover {
-    background: #000;
-    color: #fff;
+.contact-form button:hover {
+  background: #fff;
+  color: #000;
 }
 
-.center-content {
-    text-align: center;
-    display: flex;
+/* FOOTER */
+.footer {
+  background: #111;
+  padding: 60px 6%;
+  text-align: center;
+}
+
+.footer-logo {
+  height: 70px;
+  margin-bottom: 15px;
+}
+
+.footer p {
+  opacity: 0.7;
+}
+
+/* =====================
+   FADE-IN ON SCROLL
+===================== */
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease-out;
+}
+
+.fade-section.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 900px) {
+  #navMenu {
+    display: none;
     flex-direction: column;
-    align-items: center;
-}
+    position: absolute;
+    top: 70px;
+    right: 6%;
+    background: #0e0e0e;
+    padding: 20px;
+    border-radius: 12px;
+    z-index: 1000;
+  }
+  #firstheader {
+    background-image: url(./images/spa-salon-therapy-treatment_53876-141241.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .split-layout {
-        flex-direction: column;
-    }
-    .image-side {
-        height: 300px;
-        width: 100%;
-    }
-    .sticky-section h1 { font-size: 2.5rem; }
-    .sticky-section h2 { font-size: 2rem; }
-    #firstheader {
-        background-image: url('./images/nail-1.jpeg');
-    }
+  #navMenu.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .split-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .section-img {
+    margin-top: 40px;
+  }
 }

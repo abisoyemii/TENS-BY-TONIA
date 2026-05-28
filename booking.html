@@ -2,201 +2,865 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
-  <title>Tens by Tonia - Book Appointment</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tens by Tonia | Book An Appointment</title>
   
-<link rel="stylesheet" href="booking.css?v=2">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="booking.css">
 </head>
 <body>
 
-<!-- HERO HEADER -->
-<header class="booking-header">
+<!-- Custom Cursor -->
+<div class="cursor-dot"></div>
+<div class="cursor-outline"></div>
 
-  <!-- NAVIGATION -->
-  <nav class="booking-nav">
-    <div class="booking-nav-row">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="newclients.html">New Clients</a>
+<!-- Navigation -->
+<nav class="nav" id="navbar">
+  <img class="logo" src="./images/Copilot_20260121_121459-removebg-preview.png">
+  
+  <ul class="nav-links">
+    <li><a href="index.html" >Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="booking.html">Book Now</a></li>
+    <li><a href="#location">Location</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  
+  <a href="#booking" class="nav-cta">Book Appointment</a>
+  
+  <button type="button" id="hamburger" aria-label="Open menu">
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+</button>
+</nav>
+
+
+<!-- Mobile Menu -->
+<div id="mobile-nav">
+    <button type="button" id="mobile-close-btn">
+        <i class="fas fa-times"></i>
+    </button>
+    
+    <div style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2rem;">
+        <a href="index.html" class="mobile-link" style="transition-delay: 0.1s;">Home</a>
+        <a href="services.html" class="mobile-link" style="transition-delay: 0.2s;">Services</a>
+        <a href="booking.html" class="mobile-link" style="transition-delay: 0.3s;">Book Now</a>
+        <a href="#location" class="mobile-link" style="transition-delay: 0.4s;">Location</a>
+        <a href="#faq" class="mobile-link" style="transition-delay: 0.5s;">FAQ</a>
     </div>
-  </nav>
-
-  <!-- LOGO -->
-  <div class="booking-logo">
-    <img src="./images/Copilot_20260121_121459-removebg-preview.png" alt="Logo">
-  </div>
-
-  <!-- HAMBURGER -->
-  <div class="booking-hamburger" id="booking-hamburger">
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-
-  <!-- HERO BUTTON -->
-  <div class="booking-hero-btn-container">
-  </div>
-
-</header>
-
-<!-- HAMBURGER MENU OVERLAY -->
-<div class="booking-menu-overlay" id="booking-menu-overlay">
-  <button class="booking-menu-close-btn" id="booking-close-btn">&times;</button>
-
-  <div class="booking-logo-menu">
-    <img src="./images/Copilot_20260121_121459-removebg-preview.png" alt="Logo">
-  </div>
-
-  <nav class="booking-menu-links">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="newclients.html">New Clients</a>
-    <a href="contact.html">Contact Us</a>
-    <a href="booking.html">Book Appointment</a>
-  </nav>
-
 </div>
 
-<!-- BOOKING FORM SECTION -->
-<section id="booking-form" class="booking-section">
+<!-- Hero Section -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  
+  <div class="hero-content">
+    <div class="hero-badge">
+      <i class="fas fa-sparkles"></i>
+      Lagos Island's Premier Nail Sanctuary
+    </div>
+    
+    <h1 class="hero-title">Where Art Meets Elegance</h1>
+    
+    <p class="hero-subtitle">
+      Experience luxury nail artistry in our pink sanctuary. From classic manicures to bespoke nail art, we transform your nails into masterpieces.
+    </p>
+    
+    <div class="hero-cta-group">
+      <a href="#booking" class="btn-primary">
+        Book Your Session <i class="fas fa-arrow-right"></i>
+      </a>
+      <a href="#services" class="btn-secondary">
+        Explore Services
+      </a>
+    </div>
+    
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-number">5k+</span>
+        <span class="stat-label">Happy Clients</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">15+</span>
+        <span class="stat-label">Years Experience</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">50+</span>
+        <span class="stat-label">Design Awards</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="features" id="features">
+  <div class="section-header">
+    <span class="section-label">Why Choose Us</span>
+    <h2 class="section-title">The Tens by Tonia Difference</h2>
+    <p class="section-subtitle">Experience nail care redefined with our commitment to excellence, hygiene, and artistry.</p>
+  </div>
+  
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">
+        <i class="fas fa-calendar-check"></i>
+      </div>
+      <h3>Seamless Booking</h3>
+      <p>Book your appointment 24/7 through our intuitive online system. No waiting, no hassle.</p>
+    </div>
+    
+    <div class="feature-card">
+      <div class="feature-icon">
+        <i class="fas fa-shield-alt"></i>
+      </div>
+      <h3>Hospital-Grade Hygiene</h3>
+      <p>Medical-level sterilization protocols. Your safety is our absolute priority.</p>
+    </div>
+    
+    <div class="feature-card">
+      <div class="feature-icon">
+        <i class="fas fa-gem"></i>
+      </div>
+      <h3>Premium Products</h3>
+      <p>We use only luxury, cruelty-free products that nourish while they beautify.</p>
+    </div>
+    
+    <div class="feature-card">
+      <div class="feature-icon">
+        <i class="fas fa-paint-brush"></i>
+      </div>
+      <h3>Bespoke Artistry</h3>
+      <p>Each design is customized to your style, mood, and the occasion.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="services" id="services">
+  <div class="section-header">
+    <span class="section-label">Our Services</span>
+    <h2 class="section-title">Curated Nail Experiences</h2>
+    <p class="section-subtitle">Select from our menu of premium treatments, each designed to pamper and perfect.</p>
+  </div>
+  
+  <div class="services-grid">
+    <div class="service-card" data-service="manicure" data-price="15000" data-duration="30 min">
+      <div class="service-image">
+        <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=800&auto=format&fit=crop" alt="Classic Manicure">
+        <span class="service-badge">Most Popular</span>
+      </div>
+      <div class="service-content">
+        <div class="service-meta">
+          <span class="service-price">₦15,000</span>
+          <span class="service-duration"><i class="far fa-clock"></i> 30 min</span>
+        </div>
+        <h3>Classic Manicure</h3>
+        <p>Precision shaping, cuticle care, relaxing massage, and flawless polish application.</p>
+      </div>
+    </div>
+    
+    <div class="service-card" data-service="pedicure" data-price="20000" data-duration="45 min">
+      <div class="service-image">
+        <img src="images/WhatsApp Image 2026-02-14 at 22.31.12.jpeg" alt="Luxury Pedicure">
+      </div>
+      <div class="service-content">
+        <div class="service-meta">
+          <span class="service-price">₦20,000</span>
+          <span class="service-duration"><i class="far fa-clock"></i> 45 min</span>
+        </div>
+        <h3>Luxury Pedicure</h3>
+        <p>Revitalizing foot soak, exfoliating scrub, deep massage, and perfect polish.</p>
+      </div>
+    </div>
+    
+    <div class="service-card" data-service="gel" data-price="25000" data-duration="45 min">
+      <div class="service-image">
+        <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=800&auto=format&fit=crop" alt="Gel Manicure">
+        <span class="service-badge">Long Lasting</span>
+      </div>
+      <div class="service-content">
+        <div class="service-meta">
+          <span class="service-price">₦25,000</span>
+          <span class="service-duration"><i class="far fa-clock"></i> 45 min</span>
+        </div>
+        <h3>Gel Manicure</h3>
+        <p>Chip-resistant, high-gloss finish that lasts up to 3 weeks with zero drying time.</p>
+      </div>
+    </div>
+    
+    <div class="service-card" data-service="extensions" data-price="35000" data-duration="90 min">
+      <div class="service-image">
+        <img src="images/WhatsApp Image 2026-02-14 at 22.31.11 (1).jpeg">
+      </div>
+      <div class="service-content">
+        <div class="service-meta">
+          <span class="service-price">₦35,000</span>
+          <span class="service-duration"><i class="far fa-clock"></i> 90 min</span>
+        </div>
+        <h3>Nail Extensions</h3>
+        <p>Acrylic or gel extensions sculpted to your desired length and shape.</p>
+      </div>
+    </div>
+    
+    <div class="service-card" data-service="nailart" data-price="10000" data-duration="30+ min">
+      <div class="service-image">
+        <img src="images/port2.jpeg">
+        <span class="service-badge">Custom</span>
+      </div>
+      <div class="service-content">
+        <div class="service-meta">
+          <span class="service-price">₦10,000+</span>
+          <span class="service-duration"><i class="far fa-clock"></i> 30+ min</span>
+        </div>
+        <h3>Nail Art Design</h3>
+        <p>Hand-painted art, 3D embellishments, crystals, and bespoke creative designs.</p>
+      </div>
+    </div>
+    
+    <div class="service-card" data-service="combo" data-price="40000" data-duration="90 min">
+      <div class="service-image">
+        <img src="images/port3.jpeg">
+        <span class="service-badge">Save ₦5,000</span>
+      </div>
+      <div class="service-content">
+        <div class="service-meta">
+          <span class="service-price">₦40,000</span>
+          <span class="service-duration"><i class="far fa-clock"></i> 90 min</span>
+        </div>
+        <h3>Manicure + Pedicure Combo</h3>
+        <p>Complete head-to-toe nail care with complimentary paraffin treatment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Booking Section -->
+<section class="booking" id="booking">
+  <div class="section-header">
+    <span class="section-label">Reservations</span>
+    <h2 class="section-title">Book Your Experience</h2>
+    <p class="section-subtitle">Complete the form below to secure your appointment.</p>
+  </div>
+  
   <div class="booking-container">
-    <h2>Book Your Luxury Nail Experience</h2>
-    <form class="booking-form">
-      <div class="booking-form-group">
-        <input type="text" placeholder=" " required>
-        <label>Your Name</label>
+    <!-- Steps -->
+    <div class="steps">
+      <div class="step active" data-step="1">
+        <div class="step-number">1</div>
+        <span class="step-label">Details</span>
       </div>
-      <div class="booking-form-group">
-        <input type="email" placeholder=" " required>
-        <label>Email</label>
+      <div class="step" data-step="2">
+        <div class="step-number">2</div>
+        <span class="step-label">Service</span>
       </div>
-      <div class="booking-form-group">
-        <input type="tel" placeholder=" " required>
-        <label>Phone Number</label>
+      <div class="step" data-step="3">
+        <div class="step-number">3</div>
+        <span class="step-label">Payment</span>
       </div>
-      <div class="booking-form-group">
-        <select required>
-          <option value="" disabled selected>Select Service</option>
-          <option>Manicure</option>
-          <option>Pedicure</option>
-          <option>Gel Nails</option>
-          <option>Extensions</option>
-        </select>
-        <label>Select Service</label>
+    </div>
+    
+    <!-- Step 1: Personal Details -->
+    <div class="form-step active" data-step-content="1">
+      <form id="form-step-1">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">First Name</label>
+            <input type="text" class="form-input" name="firstname" placeholder="Enter your first name" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Last Name</label>
+            <input type="text" class="form-input" name="lastname" placeholder="Enter your last name" required>
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-input" name="email" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Phone Number</label>
+            <input type="tel" class="form-input" name="phone" placeholder="+234 907 906 6183" required>
+          </div>
+        </div>
+        
+        <div class="form-nav">
+          <div></div>
+          <button type="button" class="btn-primary next-step" data-next="2">
+            Continue <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+    
+    <!-- Step 2: Service Selection -->
+    <div class="form-step" data-step-content="2">
+      <form id="form-step-2">
+        <div class="form-group">
+          <label class="form-label">Select Service</label>
+          <select class="form-select" name="service" id="service-select" required>
+            <option value="">Choose a service...</option>
+            <option value="manicure" data-price="15000" data-duration="30 min">Classic Manicure — ₦15,000</option>
+            <option value="pedicure" data-price="20000" data-duration="45 min">Luxury Pedicure — ₦20,000</option>
+            <option value="gel" data-price="25000" data-duration="45 min">Gel Manicure — ₦25,000</option>
+            <option value="extensions" data-price="35000" data-duration="90 min">Nail Extensions — ₦35,000</option>
+            <option value="nailart" data-price="10000" data-duration="30+ min">Nail Art Design — ₦10,000+</option>
+            <option value="combo" data-price="40000" data-duration="90 min">Manicure + Pedicure Combo — ₦40,000</option>
+          </select>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Preferred Date</label>
+            <input type="date" class="form-input" name="date" id="booking-date" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Preferred Time</label>
+            <select class="form-select" name="time" required>
+              <option value="">Select time...</option>
+              <option value="09:00">9:00 AM</option>
+              <option value="10:00">10:00 AM</option>
+              <option value="11:00">11:00 AM</option>
+              <option value="12:00">12:00 PM</option>
+              <option value="13:00">1:00 PM</option>
+              <option value="14:00">2:00 PM</option>
+              <option value="15:00">3:00 PM</option>
+              <option value="16:00">4:00 PM</option>
+              <option value="17:00">5:00 PM</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label">Special Requests (Optional)</label>
+          <textarea class="form-textarea" name="notes" placeholder="Any allergies, preferred nail shape, or design ideas..."></textarea>
+        </div>
+        
+        <div class="form-nav">
+          <button type="button" class="btn-secondary prev-step" data-prev="1">
+            <i class="fas fa-arrow-left"></i> Back
+          </button>
+          <button type="button" class="btn-primary next-step" data-next="3">
+            Continue to Payment <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+    
+    <!-- Step 3: Payment -->
+    <div class="form-step" data-step-content="3">
+      <div class="summary-card">
+        <h3 style="margin-bottom: 1rem; font-size: 1.1rem;">Booking Summary</h3>
+        <div class="summary-row">
+          <span>Service</span>
+          <span id="summary-service">-</span>
+        </div>
+        <div class="summary-row">
+          <span>Date & Time</span>
+          <span id="summary-datetime">-</span>
+        </div>
+        <div class="summary-row">
+          <span>Duration</span>
+          <span id="summary-duration">-</span>
+        </div>
+        <div class="summary-row">
+          <span>Total Amount</span>
+          <span class="summary-total" id="summary-total">-</span>
+        </div>
       </div>
-      <div class="booking-form-group">
-        <input type="date" required>
-        <label>Date</label>
-      </div>
-      <div class="booking-form-group">
-        <input type="time" required>
-        <label>Time</label>
-      </div>
-      <div class="booking-form-group">
-        <textarea placeholder=" "></textarea>
-        <label>Special Requests</label>
-      </div>
-      <button type="submit" class="booking-btn">Continue to Payment</button>
-    </form>
+      
+      <form id="payment-form">
+        <label class="form-label">Payment Method</label>
+        <div class="payment-methods">
+          <label class="payment-method">
+            <input type="radio" name="payment" value="card" checked>
+            <div class="payment-method-card">
+              <i class="fas fa-credit-card"></i>
+              <span>Card</span>
+            </div>
+          </label>
+          
+          <label class="payment-method">
+            <input type="radio" name="payment" value="transfer">
+            <div class="payment-method-card">
+              <i class="fas fa-university"></i>
+              <span>Bank Transfer</span>
+            </div>
+          </label>
+          
+          <label class="payment-method">
+            <input type="radio" name="payment" value="paypal">
+            <div class="payment-method-card">
+              <i class="fab fa-paypal"></i>
+              <span>PayPal</span>
+            </div>
+          </label>
+        </div>
+        
+        <!-- Card Fields -->
+        <div id="card-fields">
+          <div class="form-group">
+            <label class="form-label">Cardholder Name</label>
+            <input type="text" class="form-input" name="cardname" placeholder="Name on card">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Card Number</label>
+            <input type="text" class="form-input" name="cardnumber" placeholder="0000 0000 0000 0000" maxlength="19">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Expiry Date</label>
+              <input type="text" class="form-input" name="expiry" placeholder="MM/YY" maxlength="5">
+            </div>
+            <div class="form-group">
+              <label class="form-label">CVV</label>
+              <input type="text" class="form-input" name="cvv" placeholder="123" maxlength="3">
+            </div>
+          </div>
+        </div>
+        
+        <!-- Transfer Fields -->
+        <div id="transfer-fields" style="display: none;">
+          <div class="summary-card" style="background: rgba(236, 72, 153, 0.05);">
+            <p style="margin-bottom: 0.5rem;"><strong>Bank:</strong> First Bank of Nigeria</p>
+            <p style="margin-bottom: 0.5rem;"><strong>Account Name:</strong> Tens by Tonia Ltd</p>
+            <p style="margin-bottom: 0.5rem;"><strong>Account Number:</strong> 0123456789</p>
+            <p style="color: var(--primary); font-size: 0.9rem; margin-top: 1rem;">
+              <i class="fas fa-info-circle"></i> Use your email as payment reference
+            </p>
+          </div>
+        </div>
+        
+        <!-- PayPal Fields -->
+        <div id="paypal-fields" style="display: none;">
+          <div class="summary-card" style="text-align: center; color: var(--text-secondary);">
+            <i class="fab fa-paypal" style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;"></i>
+            <p>You will be redirected to PayPal to complete your payment securely.</p>
+          </div>
+        </div>
+        
+        <div class="form-nav">
+          <button type="button" class="btn-secondary prev-step" data-prev="2">
+            <i class="fas fa-arrow-left"></i> Back
+          </button>
+          <button type="submit" class="btn-primary">
+            <i class="fas fa-lock"></i> Pay & Confirm
+          </button>
+        </div>
+      </form>
+    </div>
   </div>
 </section>
 
-<!-- BOOKING POLICIES -->
-<section class="booking-policies-section">
-  <div class="booking-policies-container">
-    <h2>Booking Policies</h2>
-    <ul>
-      <li>Please arrive 5–10 minutes before your appointment.</li>
-      <li>Cancellations within 24 hours may incur a 50% fee.</li>
-      <li>All services require prepayment via our payment form to secure your spot.</li>
-      <li>Children under 12 must be accompanied by an adult.</li>
-      <li>We reserve the right to refuse service if nails are damaged or illness is present.</li>
-    </ul>
+<!-- Policies -->
+<section class="policies">
+  <div class="section-header">
+    <span class="section-label">Policies</span>
+    <h2 class="section-title">Good to Know</h2>
+  </div>
+  
+  <div class="policies-grid">
+    <div class="policy-card">
+      <div class="policy-icon">
+        <i class="fas fa-clock"></i>
+      </div>
+      <h3>Arrival Time</h3>
+      <p>Please arrive 5-10 minutes early to select your polish and settle in.</p>
+    </div>
+    
+    <div class="policy-card">
+      <div class="policy-icon">
+        <i class="fas fa-calendar-times"></i>
+      </div>
+      <h3>Cancellation</h3>
+      <p>24-hour notice required. Late cancellations incur 50% fee.</p>
+    </div>
+    
+    <div class="policy-card">
+      <div class="policy-icon">
+        <i class="fas fa-child"></i>
+      </div>
+      <h3>Children</h3>
+      <p>Under 12 must be accompanied. We maintain a serene environment.</p>
+    </div>
+    
+    <div class="policy-card">
+      <div class="policy-icon">
+        <i class="fas fa-heart"></i>
+      </div>
+      <h3>Health First</h3>
+      <p>We reserve the right to refuse service for safety reasons.</p>
+    </div>
   </div>
 </section>
 
-<!-- PAYMENT FORM -->
-<section class="booking-payment-section">
-  <div class="booking-payment-container">
-    <form class="booking-payment-form">
-      <h2>Secure Your Appointment with Payment</h2>
-      <div class="booking-payment-methods">
-        <img src="./images/visa.png" alt="Visa">
-        <img src="./images/mc.png" alt="Mastercard">
-        <img src="./images/paypal.png" alt="PayPal">
+<!-- Testimonials -->
+<section class="testimonials">
+  <div class="section-header">
+    <span class="section-label">Testimonials</span>
+    <h2 class="section-title">Client Love</h2>
+  </div>
+  
+  <div class="testimonial-slider">
+    <div class="testimonial active">
+      <div class="testimonial-stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
       </div>
-
-      <div class="booking-form-group">
-        <input type="text" placeholder=" " required>
-        <label>Cardholder Name</label>
-      </div>
-      <div class="booking-form-group">
-        <input type="text" placeholder=" " maxlength="19" required>
-        <label>Card Number</label>
-      </div>
-      <div class="booking-form-group two-col">
+      <p class="testimonial-text">"The online booking was seamless, and the service exceeded every expectation. My nails have never looked this stunning!"</p>
+      <div class="testimonial-author">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&auto=format&fit=crop" alt="Amaka">
         <div>
-          <input type="text" placeholder=" " maxlength="5" required>
-          <label>Expiry</label>
-        </div>
-        <div>
-          <input type="text" placeholder=" " maxlength="3" required>
-          <label>CVV</label>
+          <h4>Amaka Okafor</h4>
+          <span>Regular Client</span>
         </div>
       </div>
+    </div>
+    
+    <div class="testimonial">
+      <div class="testimonial-stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+      </div>
+      <p class="testimonial-text">"Tens by Tonia made my bridal shower unforgettable. The attention to detail is unmatched in Lagos."</p>
+      <div class="testimonial-author">
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&auto=format&fit=crop" alt="Chioma">
+        <div>
+          <h4>Chioma Nwosu</h4>
+          <span>Bridal Client</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="testimonial">
+      <div class="testimonial-stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+      </div>
+      <p class="testimonial-text">"From the ambiance to the artistry, everything screams luxury. This is now my monthly self-care ritual."</p>
+      <div class="testimonial-author">
+        <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=200&auto=format&fit=crop" alt="Ngozi">
+        <div>
+          <h4>Ngozi Eze</h4>
+          <span>First-time Client</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="testimonial-nav">
+      <button class="testimonial-btn prev"><i class="fas fa-arrow-left"></i></button>
+      <div class="testimonial-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      <button class="testimonial-btn next"><i class="fas fa-arrow-right"></i></button>
+    </div>
+  </div>
+</section>
 
-      <button type="submit" class="booking-btn" id="booking-payment-btn">Pay Now</button>
-    </form>
-
-    <!-- PAYMENT MODAL -->
-    <div class="booking-payment-modal" id="bookingPaymentModal">
-      <div class="booking-payment-modal-content">
-        <span class="booking-close-modal" id="closePaymentModal">&times;</span>
-        <h3>Payment Successful!</h3>
-        <p>💅 Your appointment has been booked and secured.</p>
-        <button class="booking-btn" id="modalBtn">Okay</button>
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="section-header">
+    <span class="section-label">FAQ</span>
+    <h2 class="section-title">Questions Answered</h2>
+  </div>
+  
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-question">
+        <span>How do I reschedule my appointment?</span>
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      <div class="faq-answer">
+        <p>Call or email us at least 24 hours in advance. Online rescheduling is coming soon to make it even easier.</p>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <button class="faq-question">
+        <span>What payment methods do you accept?</span>
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      <div class="faq-answer">
+        <p>We accept all major cards, bank transfers, and PayPal. All transactions are secured with 256-bit encryption.</p>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <button class="faq-question">
+        <span>Can I book for a group event?</span>
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      <div class="faq-answer">
+        <p>Absolutely! We love bridal parties and corporate events. Call us directly for groups of 4 or more for special rates.</p>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <button class="faq-question">
+        <span>Do you offer gift cards?</span>
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      <div class="faq-answer">
+        <p>Yes! Our digital gift cards are available in any denomination and delivered instantly via email.</p>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <button class="faq-question">
+        <span>What if I'm running late?</span>
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      <div class="faq-answer">
+        <p>Please call us. We offer a 10-minute grace period, after which we may need to adjust your service time.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- MAP -->
-<section class="booking-map-section">
-  <h2>Our Location</h2>
-  <div class="booking-map-container">
-    <iframe
-      src="https://www.google.com/maps?q=22%20Iduntafa%20Str,%20off%20Adeniji%20Adele%20Road,%20Lagos%20Island,%20Lagos,%20Nigeria&output=embed"
-      allowfullscreen="" loading="lazy"></iframe>
+<!-- Location -->
+<section class="location" id="location">
+  <div class="section-header">
+    <span class="section-label">Visit Us</span>
+    <h2 class="section-title">Our Pink Sanctuary</h2>
+  </div>
+  
+  <div class="location-grid">
+    <div class="location-info">
+      <div class="info-card">
+        <div class="info-icon">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <div class="info-content">
+          <h4>Address</h4>
+          <p>22 Iduntafa Street<br>Off Adeniji Adele Road<br>Lagos Island, Lagos</p>
+        </div>
+      </div>
+      
+      <div class="info-card">
+        <div class="info-icon">
+          <i class="fas fa-phone"></i>
+        </div>
+        <div class="info-content">
+          <h4>Phone</h4>
+          <p>+234 907 906 6183</p>
+        </div>
+      </div>
+      
+      <div class="info-card">
+        <div class="info-icon">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <div class="info-content">
+          <h4>Email</h4>
+          <p>hello@tensbytonia.com</p>
+        </div>
+      </div>
+      
+      <div class="info-card">
+        <div class="info-icon">
+          <i class="fas fa-clock"></i>
+        </div>
+        <div class="info-content">
+          <h4>Hours</h4>
+          <p>Mon-Fri: 9AM - 8PM<br>Sat: 10AM - 6PM<br>Sun: Closed</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.5!2d3.4!3d6.45!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMjcnMDAuMCJOIDPCsDI0JzAwLjAiRQ!5e0!3m2!1sen!2sng!4v1234567890"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="booking-footer">
-  <div class="booking-footer-container">
-    <div class="booking-footer-left">
-      <img src="./images/Copilot_20260121_121459-removebg-preview.png" alt="Logo" class="booking-footer-logo">
-      <p>© 2026 TENS BY TONIA. All rights reserved.</p>
-    </div>
-    <div class="booking-footer-right">
-      <h4>Contact Us</h4>
-      <p>Email: info@tensbytonia.com</p>
-      <p>Phone: +234 123 456 7890</p>
-      <div class="booking-social-icons">
-        <a href="#"><img src="./images/instagram.png" alt="Instagram"></a>
-        <a href="#"><img src="./images/facebook.png" alt="Facebook"></a>
-        <a href="#"><img src="./images/twitter.png" alt="Twitter"></a>
+<!-- Newsletter -->
+<section class="newsletter">
+  <div class="newsletter-content">
+    <h2>Stay in the Pink Loop</h2>
+    <p>Subscribe for exclusive offers, new collections, and nail care tips.</p>
+    <form class="newsletter-form" id="newsletter-form">
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit" class="btn-primary">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <h3>Tens<span>by</span>Tonia</h3>
+      <p>Redefining nail artistry with a touch of pink luxury. Experience the difference.</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
       </div>
+    </div>
+    
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#booking">Book Now</a></li>
+        <li><a href="#location">Location</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-links">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Manicure</a></li>
+        <li><a href="#services">Pedicure</a></li>
+        <li><a href="#services">Gel Nails</a></li>
+        <li><a href="#services">Nail Art</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p><i class="fas fa-map-marker-alt"></i> 22 Iduntafa St, Lagos Island</p>
+      <p><i class="fas fa-phone"></i> +234 907 906 6183</p>
+      <p><i class="fas fa-envelope"></i> hello@tensbytonia.com</p>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>&copy; 2026 Tens by Tonia. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
     </div>
   </div>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-<script src="booking.js?v=2"></script>
+<!-- Success Modal -->
+<div class="modal" id="success-modal">
+  <div class="modal-content">
+    <button class="modal-close" id="modal-close">&times;</button>
+    <div class="modal-icon">
+      <i class="fas fa-check-circle"></i>
+    </div>
+    <h2>Booking Confirmed!</h2>
+    <p>A confirmation email has been sent to <span id="confirm-email">your email</span>.</p>
+    <div class="modal-details">
+      <p><strong>Reference:</strong> <span id="confirm-ref">#TTB-001</span></p>
+      <p><strong>Date:</strong> <span id="confirm-date">-</span></p>
+      <p><strong>Time:</strong> <span id="confirm-time">-</span></p>
+    </div>
+    <button class="btn-primary" id="modal-done">Done</button>
+  </div>
+</div>
+
+
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-nav" class="fixed inset-0 z-40 bg-[#0a0a0a]/98 backdrop-blur-lg opacity-0 invisible transition-all duration-500 flex flex-col">
+    
+    <!-- Close button (X) -->
+    <div class="absolute top-6 right-6">
+        <button type="button" id="mobile-close-btn" class="w-10 h-10 flex items-center justify-center text-[#ec4899] text-2xl">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    
+    <!-- Menu Links -->
+    <div class="flex-1 flex flex-col items-center justify-center gap-8">
+        <a href="index.html" class="mobile-link text-4xl font-serif text-white hover:text-[#ec4899] transition-all duration-300 transform translate-y-8 opacity-0">Home</a>
+        <a href="services.html" class="mobile-link text-4xl font-serif text-white hover:text-[#ec4899] transition-all duration-300 transform translate-y-8 opacity-0">Services</a>
+        <a href="booking.html" class="mobile-link text-4xl font-serif text-white hover:text-[#ec4899] transition-all duration-300 transform translate-y-8 opacity-0">Book Now</a>
+        <a href="#location" class="mobile-link text-4xl font-serif text-white hover:text-[#ec4899] transition-all duration-300 transform translate-y-8 opacity-0">Location</a>
+        <a href="#faq" class="mobile-link text-4xl font-serif text-white hover:text-[#ec4899] transition-all duration-300 transform translate-y-8 opacity-0">FAQ</a>
+    </div>
+    
+</div>
+
+
+
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    const closeBtn = document.getElementById('mobile-close-btn');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+    
+    console.log('Hamburger:', hamburger); // Check if found
+    console.log('Mobile Nav:', mobileNav); // Check if found
+    
+    if (!hamburger || !mobileNav) {
+        console.error('Mobile menu elements not found!');
+        return;
+    }
+    
+    function openMenu() {
+        console.log('Opening menu');
+        mobileNav.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    
+    function closeMenu() {
+        console.log('Closing menu');
+        mobileNav.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    
+    hamburger.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        openMenu();
+    });
+    
+    closeBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        closeMenu();
+    });
+    
+    mobileLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+            closeMenu();
+        });
+    });
+    
+    // Close on escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && mobileNav.classList.contains('active')) {
+            closeMenu();
+        }
+    });
+});
+</script>
+
+<!-- Scripts -->
+<script src="booking.js"></script>
 </body>
 </html>

@@ -1,46 +1,34 @@
-document.addEventListener('DOMContentLoaded', () => {
-    
-    // --- HAMBURGER MENU LOGIC ---
-    const hamburger = document.getElementById('hamburger');
-    const menuOverlay = document.getElementById('menuOverlay');
-    const closeBtn = document.getElementById('closeBtn');
 
-    if (hamburger && menuOverlay && closeBtn) {
-        hamburger.addEventListener('click', () => {
-            menuOverlay.classList.add('active');
-        });
 
-        closeBtn.addEventListener('click', () => {
-            menuOverlay.classList.remove('active');
-        });
+// OPTIONAL: Smooth scroll for anchor links
+navLinks.forEach(link => {
+  link.addEventListener('click', function(e) {
+    if (this.hash !== "") {
+      e.preventDefault();
+      const hash = this.hash;
+      document.querySelector(hash).scrollIntoView({ behavior: 'smooth' });
     }
+  });
+});
 
-    // --- ANIMATIONS (GSAP) ---
-    // If GSAP is loaded, animate text as sections come into view
-    if (typeof gsap !== 'undefined') {
-        
-        // Animate Hero Text
-        gsap.from(".reveal-text", {
-            y: 50,
-            opacity: 0,
-            duration: 1,
-            stagger: 0.2,
-            ease: "power3.out"
-        });
+// =======================
+// Fade-in sections on scroll
+// =======================
+const faders = document.querySelectorAll('.fade-section');
 
-        // Animate Elements inside sticky sections
-        gsap.utils.toArray('.sticky-section').forEach(section => {
-            gsap.from(section.querySelectorAll('h2, p, img, .policy-card'), {
-                scrollTrigger: {
-                    trigger: section,
-                    start: "top center", // Animation starts when top of section hits center of screen
-                    toggleActions: "play none none reverse"
-                },
-                y: 30,
-                opacity: 0,
-                duration: 0.8,
-                stagger: 0.1
-            });
-        });
-    }
+const appearOptions = {
+  threshold: 0.2,
+  rootMargin: "0px 0px -50px 0px"
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add('appear');
+    appearOnScroll.unobserve(entry.target);
+  });
+}, appearOptions);
+
+faders.forEach(fader => {
+  appearOnScroll.observe(fader);
 });
